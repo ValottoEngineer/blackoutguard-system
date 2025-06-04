@@ -1,0 +1,2 @@
+File.AppendAllText("logs.txt",
+    $"{DateTime.Now} | {incidente.Local} | {incidente.TipoFalha} | {incidente.Impacto}\n");
