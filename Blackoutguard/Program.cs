@@ -25,16 +25,19 @@ class Program
         var repo = new IncidentRepository();
         var alerts = new AlertService();
         var reports = new ReportService();
+        var simulador = new SimulationService(); // Aqui entra o novo serviço
 
         bool executando = true;
 
         while (executando)
         {
-            Console.WriteLine("\nEscolha uma opção:");
+            Console.WriteLine("\nSelecione uma opção:");
             Console.WriteLine("1 - Registrar incidente");
             Console.WriteLine("2 - Listar incidentes");
             Console.WriteLine("3 - Gerar relatório");
+            Console.WriteLine("4 - Simular falha automática");
             Console.WriteLine("0 - Sair");
+            Console.Write("Opção: ");
 
             string opcao = Console.ReadLine();
 
@@ -58,7 +61,7 @@ class Program
                     }
                     catch (Exception ex)
                     {
-                        Console.WriteLine($"Erro ao registrar: {ex.Message}");
+                        Console.WriteLine($"Erro: {ex.Message}");
                     }
                     break;
 
@@ -73,9 +76,11 @@ class Program
                     break;
 
                 case "4":
-                reports.ExportarParaCSV(repo.ListarTodos(), "relatorio.csv");
-                break;
-
+                    var incidenteSimulado = simulador.CriarSimulacao();
+                    repo.Adicionar(incidenteSimulado);
+                    alerts.VerificarEAlerta(incidenteSimulado);
+                    Console.WriteLine("⚡ Simulação registrada.");
+                    break;
 
                 case "0":
                     executando = false;
@@ -87,6 +92,6 @@ class Program
             }
         }
 
-        Console.WriteLine("Encerrando o sistema...");
+        Console.WriteLine("Encerrando sistema...");
     }
 }

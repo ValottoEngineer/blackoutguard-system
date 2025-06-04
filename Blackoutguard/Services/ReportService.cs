@@ -1,16 +1,13 @@
-using BlackoutGuard.Models;
-
-namespace BlackoutGuard.Services
+public void ExportarParaCSV(List<Incident> incidentes, string caminhoArquivo)
 {
-    public class ReportService
+    using (StreamWriter writer = new StreamWriter(caminhoArquivo))
     {
-        public void GerarRelatorio(List<Incident> incidentes)
+        writer.WriteLine("Data,Local,TipoFalha,Impacto");
+        foreach (var i in incidentes)
         {
-            Console.WriteLine("==== RELATÓRIO DE INCIDENTES ====");
-            foreach (var i in incidentes)
-            {
-                Console.WriteLine($"{i.DataHora} | {i.Local} | {i.TipoFalha} | {i.Impacto}");
-            }
+            writer.WriteLine($"{i.DataHora},{i.Local},{i.TipoFalha},{i.Impacto}");
         }
     }
+
+    Console.WriteLine("📄 Relatório exportado com sucesso.");
 }
