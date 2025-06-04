@@ -72,6 +72,11 @@ class Program
                     reports.GerarRelatorio(repo.ListarTodos());
                     break;
 
+                case "4":
+                reports.ExportarParaCSV(repo.ListarTodos(), "relatorio.csv");
+                break;
+
+
                 case "0":
                     executando = false;
                     break;
