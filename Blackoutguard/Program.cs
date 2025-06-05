@@ -81,6 +81,12 @@ class Program
                     alerts.VerificarEAlerta(incidenteSimulado);
                     Console.WriteLine("⚡ Simulação registrada.");
                     break;
+                
+                case "5":
+                string caminhoCsv = "relatorio.csv"; // ou use "logs/relatorio.csv"
+                reports.ExportarParaCSV(repo.ListarTodos(), caminhoCsv);
+                break;
+
 
                 case "0":
                     executando = false;
