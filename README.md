@@ -1,4 +1,3 @@
-# blackoutguard-system
 # 🛡️ BlackoutGuard – Sistema de Monitoramento e Resposta a Falhas Elétricas
 
 Projeto desenvolvido no contexto do programa **Global Solution - FIAP (2025)**, com foco em integração interdisciplinar frente ao tema **Eventos Climáticos Extremos – Falta de Energia**.
@@ -7,23 +6,34 @@ Projeto desenvolvido no contexto do programa **Global Solution - FIAP (2025)**, 
 
 ## 📌 Descrição do Projeto
 
-O **BlackoutGuard** é um sistema voltado a ambientes urbanos mistos (residencial + coworking) que permite o **registro de falhas energéticas**, **disparo de alertas** e **geração de relatórios detalhados** durante apagões. O sistema oferece suporte para decisões rápidas e atua como ferramenta de apoio à segurança e comunicação.
+O **BlackoutGuard** é uma aplicação desktop desenvolvida em C# (.NET) que permite o **registro de falhas elétricas**, **disparo de alertas automáticos**, **simulação de incidentes** e **geração de relatórios** em ambientes urbanos mistos (residencial + coworking).
 
 ---
 
-## 🧠 Motivação
+## 🧠 Objetivo
 
-Apagões recentes na Europa evidenciaram como a falta de energia afeta diretamente a operação de prédios comerciais e residenciais. O BlackoutGuard busca preencher essa lacuna com uma solução de fácil acesso, eficiente e integrada às boas práticas de engenharia de software.
+Auxiliar síndicos, técnicos e administradores durante apagões ou incidentes críticos, centralizando informações e gerando alertas automáticos com base em regras de impacto.
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## ⚙️ Tecnologias Utilizadas
 
-- Linguagem: **C#**
-- IDE: **Visual Studio**
-- Estrutura: **POO (Programação Orientada a Objetos)**
-- Armazenamento: **Arquivo local / SQLite**
-- Controle de versão: **Git + GitHub**
+- 💻 Linguagem: **C#**
+- 🧱 Arquitetura: **Programação Orientada a Objetos**
+- 🗃️ Armazenamento: **JSON local**
+- 🔒 Autenticação simples via console
+- ✅ Projeto compatível com **Visual Studio** (.NET Framework)
+
+---
+
+## 🔑 Funcionalidades
+
+- 🔐 Login com autenticação básica
+- 📝 Registro manual de incidentes
+- ⚙️ Simulação de falhas elétricas com impacto crítico
+- 🚨 Geração de alertas automáticos
+- 📊 Histórico completo de falhas
+- 📤 Exportação de relatório em CSV
 
 ---
 
