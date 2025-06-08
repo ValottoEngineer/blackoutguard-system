@@ -5,7 +5,7 @@ class Program
 {
     static void Main()
     {
-        var user = new User { Username = "admin", Password = "1234" };
+        var user = new User { Username = "operador", Password = "energia2025" };
 
         Console.WriteLine("LOGIN:");
         Console.Write("Usuário: ");

@@ -1,5 +1,6 @@
 using BlackoutGuard.Models;
 using BlackoutGuard.Services;
+using BlackoutGuard;
 
 namespace BlackoutGuard.UI
 {
@@ -9,6 +10,7 @@ namespace BlackoutGuard.UI
         private readonly AlertService alerts;
         private readonly ReportService reports;
         private readonly SimulationService simulador;
+        private readonly ExportService exportador;
 
         public MainApp()
         {
@@ -16,6 +18,7 @@ namespace BlackoutGuard.UI
             alerts = new AlertService();
             reports = new ReportService();
             simulador = new SimulationService();
+            exportador = new ExportService();
         }
 
         public void Iniciar()
@@ -113,9 +116,8 @@ namespace BlackoutGuard.UI
 
         private void Exportar()
         {
-            Console.Write("Digite o nome do arquivo (ex: relatorio.csv): ");
-            string nome = Console.ReadLine();
-            reports.ExportarParaCSV(repo.ListarTodos(), nome);
+            Console.WriteLine("Exportando relatório padrão para arquivos/exportacao.csv...");
+            exportador.ExportarParaCsv();
         }
     }
 }

@@ -37,23 +37,50 @@ Auxiliar síndicos, técnicos e administradores durante apagões ou incidentes c
 
 ---
 
-## 🔑 Funcionalidades
-
-- 🔐 Login com autenticação segura
-- 📝 Registro de ocorrências (local, tipo de falha, impacto)
-- 🚨 Geração de alertas automáticos ou manuais
-- 📋 Visualização de logs e eventos passados
-- 📈 Emissão de relatórios filtráveis por tipo e data
-
----
-
 ## 🧪 Como Executar
 
-1. Clone este repositório:
-```bash
-git clone https://github.com/seuusuario/blackoutguard-system.git
+🧪 Como Executar
+Para executar o sistema BlackoutGuard corretamente, siga os passos abaixo:
 
-## 📃 Licença
+1. Clone o repositório:
 
-Este projeto está licenciado sob os termos da [MIT License](LICENSE).  
-Desenvolvido exclusivamente para fins educacionais no contexto do **Global Solution – FIAP 2025**.
+https://github.com/ValottoEngineer/blackoutguard-system.git
+
+2. Abra o projeto no Visual Studio (versão 2019 ou superior):
+
+    - Navegue até a pasta Blackoutguard-System.
+
+    - Localize o arquivo .sln (solução) e abra com o Visual Studio.
+
+3. Compile a aplicação:
+
+    - No menu superior, clique em Build > Build Solution (ou pressione Ctrl + Shift + B).
+
+    - Verifique se a compilação foi bem-sucedida no painel inferior.
+
+4. Execute a aplicação:
+
+    - Pressione F5 ou clique em Start para iniciar o programa.
+
+    - O terminal será aberto com a tela de login.
+
+5. Faça login utilizando o usuário padrão:
+
+usuário: operador
+senha: energia2025
+
+6. Utilize o menu interativo para testar as funcionalidades:
+
+    - Registrar novo incidente
+
+    - Simular falha crítica
+
+    - Listar histórico de incidentes
+
+    - Exportar relatório em formato CSV
+
+ℹ️ O sistema armazena os dados localmente no arquivo incidentes.json, que será atualizado automaticamente após o primeiro registro.
+
+🎥 Vídeo Pitch
+Apresentação da aplicação no YouTube:
+🔗 https://youtu.be/SEU-LINK-AQUI

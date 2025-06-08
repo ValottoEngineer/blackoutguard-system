@@ -1,0 +1,9 @@
+[
+  {
+    "DataHora": "2025-06-06T10:30:00",
+    "Local": "Sala de Servidores",
+    "TipoFalha": "Ataque",
+    "Impacto": "Servidor reiniciado",
+    "ImpactoLevel": "Critico"
+  }
+]
