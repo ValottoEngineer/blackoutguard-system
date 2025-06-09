@@ -19,21 +19,27 @@ Auxiliar síndicos, técnicos e administradores durante apagões ou incidentes c
 ## ⚙️ Tecnologias Utilizadas
 
 - 💻 Linguagem: **C#**
-- 🧱 Arquitetura: **Programação Orientada a Objetos**
+- 🧱 Arquitetura: **Programação Orientada a Objetos (POO)**
+- 🧪 Estrutura: **Validações e Try-Catch para entradas inválidas**
 - 🗃️ Armazenamento: **JSON local**
 - 🔒 Autenticação simples via console
-- ✅ Projeto compatível com **Visual Studio** (.NET Framework)
+- ✅ Compatível com **.NET 6.0** e **Visual Studio 2019+**
 
 ---
 
 ## 🔑 Funcionalidades
 
-- 🔐 Login com autenticação básica
+### Funcionalidades principais:
 - 📝 Registro manual de incidentes
-- ⚙️ Simulação de falhas elétricas com impacto crítico
-- 🚨 Geração de alertas automáticos
-- 📊 Histórico completo de falhas
-- 📤 Exportação de relatório em CSV
+- ⚙️ Simulação aleatória de falhas elétricas
+- 🚨 Geração de alertas com base no impacto (visual + lógica)
+- 📊 Listagem do histórico completo de falhas
+- 📤 Exportação de relatório em CSV (pasta `arquivos`)
+
+### Funcionalidades complementares:
+- 🔐 Login com autenticação básica via console
+- 🛡️ Validação e tratamento de erros de entrada
+- 🧪 Uso de `try-catch` e mensagens de erro amigáveis
 
 ---
 
