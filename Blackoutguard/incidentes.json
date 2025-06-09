@@ -1,9 +1,16 @@
 [
   {
-    "DataHora": "2025-06-06T10:30:00",
+    "DataHora": "2025-06-09T11:00:03.8307769-03:00",
     "Local": "Sala de Servidores",
-    "TipoFalha": "Ataque",
-    "Impacto": "Servidor reiniciado",
-    "ImpactoLevel": "Critico"
+    "TipoFalha": "Oscila\u00E7\u00E3o",
+    "Impacto": "Sem ilumina\u00E7\u00E3o",
+    "ImpactoLevel": 1
+  },
+  {
+    "DataHora": "2025-06-09T11:01:03.2672385-03:00",
+    "Local": "FIAP - PAULISTA",
+    "TipoFalha": "QUEDA DE ENERGIA",
+    "Impacto": "MODERADO",
+    "ImpactoLevel": 0
   }
 ]

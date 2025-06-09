@@ -8,15 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- Models -->
-    <Compile Include="Models\*.cs" />
-    <!-- Services -->
-    <Compile Include="Services\*.cs" />
-    <!-- UI -->
-    <Compile Include="UI\*.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
