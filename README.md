@@ -3,6 +3,13 @@
 Projeto desenvolvido no contexto do programa **Global Solution - FIAP (2025)**, com foco em integração interdisciplinar frente ao tema **Eventos Climáticos Extremos – Falta de Energia**.
 
 ---
+### 👨‍🎓 Integrantes:
+
+RM 551445 - **Pedro Oliveira Valotto**
+
+RM97877 - **Pedro Henrique Pedrosa Tavares**
+
+RM97974 - **Guilherme Rocha Bianchini**
 
 ## 📌 Descrição do Projeto
 
