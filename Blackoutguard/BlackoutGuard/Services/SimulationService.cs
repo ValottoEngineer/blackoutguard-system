@@ -1,22 +1,23 @@
+using System;
 using BlackoutGuard.Models;
 
 namespace BlackoutGuard.Services
 {
     public class SimulationService
     {
+        private readonly Random random = new Random();
+
         public Incident CriarSimulacao()
         {
-            string[] locais = { "Coworking - Andar 1", "Residencial - Andar 4", "Sala de Servidores", "Recepção" };
-            string[] tipos = { "Queda", "Ataque", "Oscilação" };
-            string[] impactos = { "Servidor reiniciado", "Sistema de acesso falhou", "Rede inoperante", "Sem iluminação" };
+            string[] locais = { "Centro Comercial", "Hospital", "Estação de Metrô", "Prédio Residencial" };
+            string[] tipos = { "Queda de energia", "Curto-circuito", "Sobrecarga", "Pane elétrica" };
+            string[] impactos = { "Baixo", "Médio", "Alto", "Crítico" };
 
-            var rnd = new Random();
-            return new Incident(
-                DateTime.Now,
-                locais[rnd.Next(locais.Length)],
-                tipos[rnd.Next(tipos.Length)],
-                impactos[rnd.Next(impactos.Length)]
-            );
+            string local = locais[random.Next(locais.Length)];
+            string tipo = tipos[random.Next(tipos.Length)];
+            string impacto = impactos[random.Next(impactos.Length)];
+
+            return new Incident(DateTime.Now, local, tipo, impacto);
         }
     }
 }

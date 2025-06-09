@@ -1,63 +1,39 @@
+using System.Collections.Generic;
 using BlackoutGuard.Models;
-using System.Text.Json;
 
 namespace BlackoutGuard.Services
 {
     public class IncidentRepository
     {
-        private List<Incident> incidentes = new List<Incident>();
-        private readonly string caminhoArquivo = "incidentes.json";
+        private static IncidentRepository instancia;
+        private List<Incident> incidentes;
+
+        // Singleton para uso global no sistema
+        public static IncidentRepository Instancia
+        {
+            get
+            {
+                if (instancia == null)
+                    instancia = new IncidentRepository();
+                return instancia;
+            }
+        }
 
         public IncidentRepository()
         {
-            CarregarDados();
+            incidentes = new List<Incident>();
         }
 
+        // Adiciona um novo incidente
         public void Adicionar(Incident incidente)
         {
             incidentes.Add(incidente);
-            SalvarDados();
-            Console.WriteLine("✔ Incidente registrado e salvo.");
         }
 
+        // Lista todos os incidentes registrados
         public List<Incident> ListarTodos()
         {
             return incidentes;
-        }
-
-        private void SalvarDados()
-        {
-            try
-            {
-                var json = JsonSerializer.Serialize(incidentes, new JsonSerializerOptions { WriteIndented = true });
-                File.WriteAllText(caminhoArquivo, json);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Erro ao salvar dados: {ex.Message}");
-            }
-        }
-
-        private void CarregarDados()
-        {
-            try
-            {
-                if (File.Exists(caminhoArquivo))
-                {
-                    var json = File.ReadAllText(caminhoArquivo);
-                    incidentes = JsonSerializer.Deserialize<List<Incident>>(json) ?? new List<Incident>();
-                    Console.WriteLine($"📂 {incidentes.Count} incidentes carregados do histórico.");
-                }
-                else
-                {
-                    incidentes = new List<Incident>();
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Erro ao carregar dados: {ex.Message}");
-                incidentes = new List<Incident>();
-            }
         }
     }
 }
