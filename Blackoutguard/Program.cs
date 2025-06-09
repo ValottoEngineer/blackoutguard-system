@@ -1,26 +1,37 @@
-using BlackoutGuard.Models;
 using BlackoutGuard.UI;
+using BlackoutGuard.Models;
 
-class Program
+namespace BlackoutGuard
 {
-    static void Main()
+    public class Program
     {
-        var user = new User { Username = "operador", Password = "energia2025" };
-
-        Console.WriteLine("LOGIN:");
-        Console.Write("Usuário: ");
-        string inputUser = Console.ReadLine();
-
-        Console.Write("Senha: ");
-        string inputPass = Console.ReadLine();
-
-        if (!user.Authenticate(inputUser, inputPass))
+        public static void Main(string[] args)
         {
-            Console.WriteLine("❌ Usuário ou senha inválidos.");
-            return;
-        }
+            var user = new User
+            {
+                Username = "operador",
+                Password = "energia2025"
+            };
 
-        var app = new MainApp();
-        app.Iniciar();
+            Console.WriteLine("==== BLACKOUTGUARD - LOGIN ====");
+            Console.Write("Login: ");
+            string login = Console.ReadLine();
+
+            Console.Write("Senha: ");
+            string senha = Console.ReadLine();
+
+            if (user.Authenticate(login, senha))
+            {
+                MainApp app = new MainApp();
+                app.Iniciar();
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("\n❌ Credenciais inválidas. Encerrando o sistema...");
+                Console.ResetColor();
+                Environment.Exit(0); // 🛑 Finaliza a execução do sistema
+            }
+        }
     }
 }
