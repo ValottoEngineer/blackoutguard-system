@@ -1,0 +1,5 @@
+C:\FIAP\2025\GLOBALSOLUTION\blackoutguard-system\blackoutguard-system\Blackoutguard\BlackoutGuard\obj\Debug\net6.0\BlackoutGuard.GeneratedMSBuildEditorConfig.editorconfig
+C:\FIAP\2025\GLOBALSOLUTION\blackoutguard-system\blackoutguard-system\Blackoutguard\BlackoutGuard\obj\Debug\net6.0\BlackoutGuard.AssemblyInfoInputs.cache
+C:\FIAP\2025\GLOBALSOLUTION\blackoutguard-system\blackoutguard-system\Blackoutguard\BlackoutGuard\obj\Debug\net6.0\BlackoutGuard.AssemblyInfo.cs
+C:\FIAP\2025\GLOBALSOLUTION\blackoutguard-system\blackoutguard-system\Blackoutguard\BlackoutGuard\obj\Debug\net6.0\BlackoutGuard.csproj.CoreCompileInputs.cache
+C:\FIAP\2025\GLOBALSOLUTION\blackoutguard-system\blackoutguard-system\Blackoutguard\BlackoutGuard\obj\Debug\net6.0\BlackoutGuard.sourcelink.json
