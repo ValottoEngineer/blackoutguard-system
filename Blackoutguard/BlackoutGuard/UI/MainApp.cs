@@ -35,7 +35,6 @@ namespace BlackoutGuard.UI
             Console.WriteLine("\nPressione qualquer tecla para continuar...");
             Console.ReadKey();
 
-            // Redireciona para a interface principal
             UI.ExibirMenu(repo, alerts, reports, simulador, exportador);
         }
     }

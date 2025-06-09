@@ -30,7 +30,7 @@ namespace BlackoutGuard
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("\n❌ Credenciais inválidas. Encerrando o sistema...");
                 Console.ResetColor();
-                Environment.Exit(0); // 🛑 Finaliza a execução do sistema
+                Environment.Exit(0);
             }
         }
     }
